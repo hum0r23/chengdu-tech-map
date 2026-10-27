@@ -54,7 +54,7 @@
   </section>
   <footer class="footer">
     <div>口径说明：收录公开资料中具有代表性的企业、总部和研发项目，并非工商注册全量名单。“已入驻”不等同于集团全球总部；“近期入驻”按公开报道时间标识；“签约 / 在建”与正式运营严格分开。个别企业是区域总部、研发中心、子公司或项目公司。</div>
-    <div class="note">范围：新川以新川创新科技园为主；兴隆湖以成都科学城、兴隆街道、科创生态岛及环湖产业载体为主。2026.10 新增科创生态岛深度补录 32 个企业、平台及服务机构；项目进展会变化，选址或求职决策前建议再向园区与企业核实。</div>
+    <div class="note">范围：新川以新川创新科技园为主；兴隆湖以成都科学城、兴隆街道、科创生态岛及环湖产业载体为主。2026.10 新增科创生态岛深度补录 41 个企业、平台及服务机构；项目进展会变化，选址或求职决策前建议再向园区与企业核实。</div>
     <details class="sources"><summary>资料来源（政府、主流媒体及企业公告）</summary><div class="source-list" id="sources"></div></details>
   </footer>
 </main>
@@ -89,7 +89,9 @@ const SOURCES = {
   isXindian:["公开报道｜芯电慧鑫签约入驻科创生态岛","https://m.toutiao.com/article/7628166258076221990"],
   isShow:["四川天府新区｜科创生态岛企业亮相西博会","https://cdtf.gov.cn/cdtfxq/yaowen/2025-05/29/content_7358824c29344ab1b5caec1cd813e84d.shtml"],
   isW6First:["成都科创生态岛｜W6 首家入驻与载体去化","http://mp.weixin.qq.com/s?__biz=Mzk0NTYwNzExOQ==&mid=2247505418&idx=1&sn=e656fc58c86eeebaaa6d4d8cdbcab10c&chksm=c218696c9cb668aac80bfcacbd0a814dd394efe6f5b0687a82843ab836035e5c668fce29aee3#rd"],
-  isNBD:["每日经济新闻｜科创岛 50+ 家机构团队与企业入驻","https://m.nbd.com.cn/articles/2026-03-18/4297020.html"]
+  isNBD:["每日经济新闻｜科创岛 50+ 家机构团队与企业入驻","https://m.nbd.com.cn/articles/2026-03-18/4297020.html"],
+  isJuly:["成都市政府｜2026.07 北太振寰等集中签约登岛","https://www.chengdu.gov.cn/cdsrmzf/c169603/2026-07/25/content_a7ab57d793fe4e2488c31b7dadf6f700.shtml"],
+  isOPC:["人民网四川｜2026.04 首批 OPC 团队意向入驻","https://sc.people.com.cn/BIG5/n2/2026/0417/c345167-41555803.html"]
 };
 const STATUS={active:"已入驻",recent:"近期入驻",future:"签约 / 在建"};
 const regions=[
@@ -138,7 +140,8 @@ const ISLAND=[
   ["特瑞拓","高端数控系统、工业数控大模型西南总部","active","2025.04 W7签约","isW7Batch"],
   ["龙采数智","企业数智化科技服务","active","2025.04 W7签约","isW7Batch"],
   ["智博智科","AI智能体与制造业数智平台","recent","2026.09 正式签约入驻","isNBD"],
-  ["启研智算","智能计算与算力服务","future","2026.06 总岛签约","isJune"]
+  ["启研智算","智能计算与算力服务","future","2026.06 总岛签约","isJune"],
+  ["北太振寰","北太天元科学计算与系统仿真软件","recent","2026.07 签约登岛","isJuly"]
  ]},
  {cat:"空天通信 · 芯片 · 低空",items:[
   ["天府爱瑞无线","空天地一体化通信底座、卫星与5G/6G专网","recent","2026 入驻2号馆","isHardware"],
@@ -165,7 +168,17 @@ const ISLAND=[
   ["四川省大型科研仪器与工业设备共享平台","科研仪器设备开放共享","recent","2025 签约入驻","isW6First"],
   ["天府产业技术研究院","产业技术研发与成果转化平台","active","2025.11 2号馆签约","isHall2"],
   ["四川省产业技术研究院","省级产业技术研发与转化平台","future","2025.11 签约 / 推进落地","isHall2"],
-  ["院士（专家）赋能产业发展平台","院士专家资源与产业需求对接","recent","2025.11 2号馆签约","isHall2"]
+  ["院士（专家）赋能产业发展平台","院士专家资源与产业需求对接","recent","2025.11 2号馆签约","isHall2"],
+  ["四川九鼎天元集团","知识产权与科技成果转化服务","recent","2026.07 签约登岛","isJuly"],
+  ["四川乡院绿建科技","乡村绿色建筑与人居科技","recent","2026.07 签约登岛","isJuly"],
+  ["中国工商银行成都分行","科技金融、算力贷与成果转化金融伙伴","recent","2026.07 签约合作","isJuly"]
+ ]},
+ {cat:"OPC · 首批意向入驻团队",items:[
+  ["武林武智能","AI+智能硬件创业团队","future","2026.04 意向入驻","isOPC"],
+  ["模界智创（筹）","AI内容生成与数字文创","future","2026.04 意向入驻","isOPC"],
+  ["成都智漫工作室（筹）","AIGC漫剧与内容创作","future","2026.04 意向入驻","isOPC"],
+  ["深睿博（成都）","AI应用与数字化产品","future","2026.04 意向入驻","isOPC"],
+  ["泰然优创科技（筹）","AI+智能硬件与场景应用","future","2026.04 意向入驻","isOPC"]
  ]}
 ];
 let state={filter:"all",query:""};
